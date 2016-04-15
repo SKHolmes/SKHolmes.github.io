@@ -2,17 +2,6 @@
 	font-family: 'Roboto', 'Noto', sans-serif;
 }
 
-#collapse{
-	margin-top: 4px;
-	font-weight: 200;
-	border: solid;
-	border-width: 1px;
-	border-radius: 5px;
-	border-color: #8e8c83;
-	box-shadow: 10px 10px 5px #888888;
-	background-color: #3F51B5;
-}
-
 hr{
 	color: #8e8c83;
 	margin: 8px;
@@ -42,9 +31,33 @@ h4{
 	color: #FFFFFF;
 }
 
+.rate-header{
+	color: #FFFFFF;
+}
+
+.rate-name{
+	color: #FFFFFF;
+}
+
+.sub-header{
+	color: #FFFFFF;
+}
+
+.card-content{
+
+}
+
 .invisible{
 	display: none;
 	margin: 16px;
+}
+
+.rate-content{
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.6)
+		),
+	url('../images/dark_tile.jpg');
 }
 
 .rate{
@@ -52,10 +65,16 @@ h4{
 	border-bottom-right-radius: 5px;
 }
 
-#contact-button{
+.rate-icon{
 	fill: #3F51B5;
 }
-.rate-icon{
+
+.info{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+#contact-button{
 	fill: #3F51B5;
 }
 
@@ -71,8 +90,13 @@ h4{
 	box-shadow: 2px 2px 1px #888888;
 }
 
-.info{
+#collapse{
+	margin-top: 4px;
 	font-weight: 200;
-	margin: 16px;
-	color: #FFFFFF;
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #8e8c83;
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #3F51B5;
 }
