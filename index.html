@@ -11,6 +11,7 @@
   <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
   <link rel="import" href="bower_components/paper-button/paper-button.html">
   <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
@@ -39,11 +40,12 @@
   </style>
   <paper-card class="rate">
   <div class="rate-content">
-  <div class="card-content">
+  <div class="card-content" style="overflow: hidden;">
       <div class="rate-header">Curriculum Vitae</div>
       <div class="rate-name">Final Year BSc Computer Science</div>
       <div class="sub-header">Victoria Univeristy, Wellington</div>
     </div>
+
     <div class="card-actions" id="button-set">
       <paper-icon-button noink class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
       <paper-icon-button noink class="rate-icon" id="work-history-button" icon="icons:work"></paper-icon-button>
@@ -52,6 +54,7 @@
       <a href="https://github.com/SKHolmes">
         <paper-icon-button noink id="git-button" style="float: right;" src="./images/github_icon.gif">
       </a>
+      <h3 id="animationText" class="animated fadeInUp">sdthrthyj</h3>
     </paper-icon-button>
     <paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
     <paper-tooltip for="work-history-button" offset="0">Work History</paper-tooltip>

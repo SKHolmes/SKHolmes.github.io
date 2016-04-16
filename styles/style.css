@@ -32,19 +32,18 @@ h4{
 }
 
 .rate-header{
-	color: #FFFFFF;
+	color: #FFFFFF;	
+	width: 40%;
 }
 
 .rate-name{
 	color: #FFFFFF;
+	width: 40%;
 }
 
 .sub-header{
 	color: #FFFFFF;
-}
-
-.card-content{
-
+	width: 40%;
 }
 
 .invisible{
@@ -78,6 +77,17 @@ h4{
 	fill: #3F51B5;
 }
 
+#swap {
+	vertical - align: top;
+	width: 0;
+	height: 3em;
+	/* needed. px, em or any other */;
+}
+
+#swap > span {
+	position: absolute;
+}
+
 #toolbar{
 	background: #303F9F;
 	border-top-left-radius: 5px;
@@ -99,4 +109,10 @@ h4{
 	border-color: #8e8c83;
 	box-shadow: 10px 10px 5px #888888;
 	background-color: #3F51B5;
+}
+
+#animationText{
+	float: right;
+	margin: 4px;
+	/*-webkit-animation-delay: 5s;*/
 }
