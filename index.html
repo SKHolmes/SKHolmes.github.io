@@ -22,14 +22,17 @@
   <style is="custom-style">
     paper-card.rate { @apply(--layout-horizontal); }
     .rate-image {
-      width: 100px;
-      height: 170px;
-      background: url('./images/Mug.jpg');
-      background-size: cover;
+/*      width: 100px;*/
+/*      height: 100%;*/
+      background: url('./images/mug.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      flex: 1;
     }
     .rate-content {
       @apply(--layout-flex);
       float: left;
+      flex: 4;
     }
     .rate-header { @apply(--paper-font-headline); }
     .rate-name { color: var(--paper-grey-600); margin: 10px 0; }
@@ -38,11 +41,13 @@
       --iron-icon-stroke-color: var(--paper-grey-600);
     }
   </style>
-  <paper-card class="rate">
+  <paper-card style="display: flex;" class="rate">
   <div class="rate-content">
-  <div class="card-content" style="overflow: hidden;">
+    <div class="card-content">
       <div class="rate-header">Curriculum Vitae</div>
+      <br>
       <div class="rate-name">Final Year BSc Computer Science</div>
+      <br>
       <div class="sub-header">Victoria Univeristy, Wellington</div>
     </div>
 
@@ -54,7 +59,7 @@
       <a href="https://github.com/SKHolmes">
         <paper-icon-button noink id="git-button" style="float: right;" src="./images/github_icon.gif">
       </a>
-      <h3 id="animationText" class="animated fadeInUp">sdthrthyj</h3>
+      <h3 id="animationText"></h3>
     </paper-icon-button>
     <paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
     <paper-tooltip for="work-history-button" offset="0">Work History</paper-tooltip>
@@ -99,8 +104,7 @@
 <!-- ***************WORK*HISTORY*************** -->
 <!-- ***************REFERENCES*************** -->
 <div id="referencesDetails" class="invisible">
-  <h1>Reference Details</h1>
-  <hr>
+  <paper-toolbar style="background: url('./images/.jpg');"><h1>Reference Details</h1></paper-toolbar>
   <div class="info" style="overflow: hidden;">
     <div class="info" style="width: 40%; float: left;">
       <b>Alistair Boyce</b><br><i>    - Owner Proprietor Backbencher Gastropub</i>

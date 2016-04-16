@@ -62,7 +62,6 @@
         animationIndex = 0;
       }
       setTimeout(function(){
-        console.log('here');
         animationTxt.className = 'animated fadeOutUp';
         setTimeout(function(){
           app.animateText();
@@ -71,8 +70,9 @@
 
       
     }
-    animationTxt.one
+
     //Button Listeners
+
     document.getElementById('contact-button').addEventListener('click', function(){
       //If the collapse is open but displaying the details clicked, just close it.
       if(mainCollapse.opened && currentDisplay == app.DisplayEnums.CONTACT){

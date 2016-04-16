@@ -34,16 +34,19 @@ h4{
 .rate-header{
 	color: #FFFFFF;	
 	width: 40%;
+	display: inline-block
 }
 
 .rate-name{
 	color: #FFFFFF;
 	width: 40%;
+	display: inline-block
 }
 
 .sub-header{
 	color: #FFFFFF;
 	width: 40%;
+	display: inline-block
 }
 
 .invisible{
@@ -75,6 +78,14 @@ h4{
 }
 #contact-button{
 	fill: #3F51B5;
+}
+
+#collapseToolbar{
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.6)
+		),
+	url('../images/blue_background.jpg');
 }
 
 #swap {
