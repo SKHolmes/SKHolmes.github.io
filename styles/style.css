@@ -79,6 +79,9 @@ h4{
 .mug{
 	background: url('../images/profile.jpg');
 }
+.banner{
+	background: url('./images/banner.jpg');
+}
 #contact-button{
 	fill: #3F51B5;
 }
