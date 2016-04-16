@@ -76,6 +76,9 @@ h4{
 	margin: 16px;
 	color: #FFFFFF;
 }
+.mug{
+	background: url('../images/mug.jpg');
+}
 #contact-button{
 	fill: #3F51B5;
 }
