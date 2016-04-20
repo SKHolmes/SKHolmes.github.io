@@ -16,7 +16,7 @@
     var animationIndex = 0;
     var animationTxt = document.getElementById('animationText');
     var animationDelay = 500;
-    var animationArray = ['Hello World!', 'Check out my GitHub! &rarr;', '&larr; Or check out my information!', 'Get in touch I\'m always available!'];
+    var animationArray = ['Hello World!', 'Check out my GitHub! &rarr;', '&larr; Or find out more about me!', 'Get in touch I\'m always available!'];
 
     /*--------------Contact Details Collapseable--------------*/
     var contactDetailsDiv = document.getElementById('contactDetails');

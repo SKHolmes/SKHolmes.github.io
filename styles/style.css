@@ -2,19 +2,20 @@
 	font-family: 'Roboto', 'Noto', sans-serif;
 }
 
-hr{
+hr{ /* Set color of divider to stand out and give it a margin so it doesn't quite touch the end of the page. */
 	color: #8e8c83;
 	margin: 8px;
 }
 
-h1{
+h1{	/* Cut the default font weight in half as it was to heavy to read and add margins to all the
+headers, set color to white. */
 	font-weight: 200;
 	margin: 16px;
 	color: #FFFFFF;
 }
 
 h2{
-	font-weight: 400;
+	font-weight: 200;
 	margin: 16px;
 	color: #FFFFFF;
 }
@@ -25,41 +26,55 @@ h3{
 	color: #FFFFFF;
 }
 
-h4{
-	font-weight: 200;
-	margin: 16px;
-	color: #FFFFFF;
+.bottomBanner{	/* Set the appropriate corners of the toolbars in the collapse to be rounded. Hide 
+overflow so images appear rounded too.*/
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	overflow: hidden;
+	background-size: contain; 
+	background: url('../images/bottom_banner.png');
 }
 
-.rate-header{
+.topBanner{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+	background-size: contain; 
+	background: url('../images/top_banner.png');
+}
+
+.rate-header{	/* Keep inline, and lower width to leave space for image and animated text. */
 	color: #FFFFFF;	
 	width: 40%;
-	display: inline-block
+	display: inline-block;
 }
 
 .rate-name{
 	color: #FFFFFF;
 	width: 40%;
-	display: inline-block
+	display: inline-block;
 }
 
 .sub-header{
 	color: #FFFFFF;
 	width: 40%;
-	display: inline-block
+	display: inline-block;
 }
 
-.invisible{
+.invisible{	/* A class to simply keep the HTML, which i copy over to my collapse, to be invisible. */
 	display: none;
 	margin: 16px;
 }
 
-.rate-content{
+.rate-content{ /* Background image on paper-card, fade it to become a tad darker. */
 	background-image: linear-gradient(
 		rgba(0, 0, 0, 0.6),
 		rgba(0, 0, 0, 0.6)
 		),
 	url('../images/dark_tile.jpg');
+	border-bottom-left-radius: 5px;
+	/*overflow: hidden; Can't hide overflow because it affects tooltips. Doesn't seem to affect 
+	image anyway.*/
 }
 
 .rate{
@@ -76,22 +91,11 @@ h4{
 	margin: 16px;
 	color: #FFFFFF;
 }
-.mug{
-	background: url('../images/profile.jpg');
-}
-.banner{
-	background: url('./images/banner.jpg');
-}
-#contact-button{
-	fill: #3F51B5;
-}
 
-#collapseToolbar{
-	background-image: linear-gradient(
-		rgba(0, 0, 0, 0.6),
-		rgba(0, 0, 0, 0.6)
-		),
-	url('../images/blue_background.jpg');
+.profile{
+	background: url('../images/profile.jpg');
+	border-bottom-right-radius: 5px;
+	overflow: hidden;
 }
 
 #swap {
@@ -130,6 +134,6 @@ h4{
 
 #animationText{
 	float: right;
-	margin: 4px;
+	margin: 8px;
 	/*-webkit-animation-delay: 5s;*/
 }
