@@ -129,11 +129,17 @@ overflow so images appear rounded too.*/
 	border-radius: 5px;
 	border-color: #8e8c83;
 	box-shadow: 10px 10px 5px #888888;
-	background-color: #3F51B5;
+	/*background-color: #3F51B5;*/
+	background-color: #3C3EE8;
 }
 
 #animationText{
 	float: right;
 	margin: 8px;
 	/*-webkit-animation-delay: 5s;*/
+}
+
+#age{
+	font-weight: 200;
+	color: #FFFFFF;
 }

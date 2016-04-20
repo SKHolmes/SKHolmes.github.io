@@ -8,7 +8,8 @@
       CONTACT: 'contact',
       REFERENCES: 'references',
       WORK_HISTORY: 'work-history',
-      EDUCATION: 'education'
+      EDUCATION: 'education',
+      ABOUT_ME: 'about-me'
     }
 
     var mainCollapse = document.getElementById('collapse');
@@ -30,28 +31,32 @@
     /*--------------Work History Collapseable--------------*/
     var educationDetailsDiv = document.getElementById('educationDetails');
 
+    /*--------------Work History Collapseable--------------*/
+    var aboutMeDetailsDiv = document.getElementById('aboutMeDetails');
+
     app.displayContactDetails = function(){
-      var contactDetails = contactDetailsDiv.innerHTML;
-      mainCollapse.innerHTML = contactDetails;
+      mainCollapse.innerHTML = contactDetailsDiv.innerHTML;
       currentDisplay = app.DisplayEnums.CONTACT;
     }
 
     app.displayWorkHistoryDetails = function(){
-      var workHistoryDetails = workHistoryDetailsDiv.innerHTML;
-      mainCollapse.innerHTML = workHistoryDetails;
+      mainCollapse.innerHTML = workHistoryDetailsDiv.innerHTML;
       currentDisplay = app.DisplayEnums.WORK_HISTORY;
     }
 
     app.displayReferenceDetails = function(){
-      var referencesDetails = referencesDetailsDiv.innerHTML;
-      mainCollapse.innerHTML = referencesDetails;
+      mainCollapse.innerHTML = referencesDetailsDiv.innerHTML;
       currentDisplay = app.DisplayEnums.REFERENCES;
     }
 
     app.displayEducationDetails = function(){
-      var educationDetails = educationDetailsDiv.innerHTML;
-      mainCollapse.innerHTML = educationDetails;
+      mainCollapse.innerHTML = educationDetailsDiv.innerHTML;
       currentDisplay = app.DisplayEnums.EDUCATION;
+    }
+
+    app.displayAboutMeDetails = function(){
+      mainCollapse.innerHTML = aboutMeDetailsDiv.innerHTML;
+      currentDisplay = app.DisplayEnums.ABOUT_ME;
     }
 
     app.animateText = function(){
@@ -67,12 +72,18 @@
           app.animateText();
         }, 2000);
       }, 3000);
-
-      
     }
 
-    //Button Listeners
+    app.calculateAge = function() { // birthday is a date
+      var bDay = new Date(93, 5, 17);
+      var ageDifMs = Date.now() - bDay.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    document.getElementById("age").innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
 
+
+
+    //Button Listeners
     document.getElementById('contact-button').addEventListener('click', function(){
       //If the collapse is open but displaying the details clicked, just close it.
       if(mainCollapse.opened && currentDisplay == app.DisplayEnums.CONTACT){
@@ -152,6 +163,28 @@
       mainCollapse.toggle();
     }
   });
+
+    document.getElementById('about-me-button').addEventListener('click', function(){
+      //If the collapse is open but displaying the details clicked, just close it.
+      if(mainCollapse.opened && currentDisplay == app.DisplayEnums.ABOUT_ME){
+        mainCollapse.toggle();
+      //Else if the collapse is opened but displaying other details than that that was
+      //clicked. Close it, pause for the animation using a setTimeout function, change
+      //the details and reopen it.
+    }else if(mainCollapse.opened && currentDisplay != app.DisplayEnums.ABOUT_ME){
+      mainCollapse.toggle();
+      setTimeout(function(){ 
+        app.displayAboutMeDetails();
+        mainCollapse.toggle();
+      }, animationDelay); 
+      //If the collapse is not opened we can just 
+    }else if(!mainCollapse.opened){
+      app.displayAboutMeDetails();
+      mainCollapse.toggle();
+    }
+  });
+
+    app.calculateAge();
     app.animateText();
   });  
 })(document);

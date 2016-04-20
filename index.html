@@ -54,7 +54,8 @@
       <paper-icon-button noink class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
       <paper-icon-button noink class="rate-icon" id="work-history-button" icon="icons:work"></paper-icon-button>
       <paper-icon-button noink class="rate-icon" id="reference-button" icon="icons:record-voice-over"></paper-icon-button>
-      <paper-icon-button noink class="rate-icon" src="./images/computer.png" id="education-button"></paper-icon-button>     
+      <paper-icon-button noink class="rate-icon" src="./images/computer.png" id="education-button"></paper-icon-button>
+      <paper-icon-button noink class="rate-icon" id="about-me-button" icon="icons:rowing"></paper-icon-button>    
       <a href="https://github.com/SKHolmes">
         <paper-icon-button noink id="git-button" style="float: right;" src="./images/github_icon.gif">
       </a>
@@ -64,6 +65,7 @@
     <paper-tooltip for="work-history-button" offset="0">Work History</paper-tooltip>
     <paper-tooltip for="reference-button" offset="0">References</paper-tooltip>
     <paper-tooltip for="education-button" offset="0">Education and Skills</paper-tooltip>
+    <paper-tooltip for="about-me-button" offset="0">About Me</paper-tooltip>
     <paper-tooltip for="git-button" offset="0">View my GitHub</paper-tooltip>
   </div>
 </div>
@@ -171,6 +173,20 @@
     <paper-toolbar class="bottomBanner"></paper-toolbar>
   </div>
   <!-- ***************EDUCATION*************** -->
+  <!-- ***************ABOUT*ME*************** -->
+  <div id="aboutMeDetails" class="invisible">
+    <paper-toolbar class="topBanner"><h1>About Me</h1></paper-toolbar>
+    <p class="info">Hello there! This section will cover the informal aspects of myself that may interest you including, spare-time activities, growing up and anything else I deem remotely interesting to read. Feel free to skip this section as it may come across as boring or somewhat unnecessary.
+    <hr>
+    <p class="info">I am currently <span id="age" class="age"></span> years old, I dont think I have mentioned that yet. I grew up in Lower Hutt, where I attended Our Lady of the Rosary primary and intermediate school. During my time there I was selected as one of three students to attend a Gifted Kids Program (GKP) once a week where they taught a higher-level curriculum such as meta-cognition, chess and Spanish! It was here that I first discovered my interest in Spanish, which will be a reoccuring theme in my past. In my final year at intermediate we were taught spanish once a week as well! During this final year I was awarded the senior boy of the year award.<br><br>
+
+    I attended Saint Patrick's College Silverstream as my secondary school. Where I thrived in the hospitable teaching environment. In my first year I took the opportunity for the third time to learn Spanish from the beginning
+    </p>
+    </p>
+    
+    <paper-toolbar class="bottomBanner"></paper-toolbar>
+  </div>
+  <!-- ***************ABOUT*ME*************** -->
   <!-- build:js scripts/app.js -->
   <script src="./app.js"></script>
   <!-- endbuild-->
