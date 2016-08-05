@@ -100,11 +100,10 @@ overflow so images appear rounded too.*/
 	background: url('../images/profile.jpg');
 	border-bottom-right-radius: 5px;
 	display: block;
-	max-width: 486px;
-	max-height: 648px;
-	min-width: 81px;
-	min-height: 108px;
-	width: auto;
+	max-width: 160px;
+/*	max-height: 648px;
+	min-height: 108px;*/
+	width: 100%;
 	height: auto;
 	overflow: hidden;
 }
