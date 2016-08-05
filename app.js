@@ -102,7 +102,7 @@
     }else if(mainCollapse.opened && currentDisplay != app.DisplayEnums.COVER_LETTER){
       mainCollapse.toggle();
       setTimeout(function(){ 
-        app.displayContactDetails();
+        app.displayCoverLetterDetails();
         mainCollapse.toggle();
       }, animationDelay); 
       //If the collapse is not opened we can just 

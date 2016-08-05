@@ -99,6 +99,13 @@ overflow so images appear rounded too.*/
 .profile{
 	background: url('../images/profile.jpg');
 	border-bottom-right-radius: 5px;
+	display: block;
+	max-width: 486px;
+	max-height: 648px;
+	min-width: 81px;
+	min-height: 108px;
+	width: auto;
+	height: auto;
 	overflow: hidden;
 }
 
