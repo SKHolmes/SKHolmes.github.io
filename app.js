@@ -3,20 +3,22 @@
 
   var app = document.querySelector('#app');
   window.addEventListener('WebComponentsReady', function() {
+
     app.DisplayEnums = {
       NONE: 'none',
       CONTACT: 'contact',
       REFERENCES: 'references',
       WORK_HISTORY: 'work-history',
       EDUCATION: 'education',
-      ABOUT_ME: 'about-me'
+      ABOUT_ME: 'about-me',
+      COVER_LETTER: 'cover-letter'
     }
 
     var mainCollapse = document.getElementById('collapse');
     var currentDisplay = app.DisplayEnums.NONE;
     var animationIndex = 0;
     var animationTxt = document.getElementById('animationText');
-    var animationDelay = 500;
+    var animationDelay = 600;
     var animationArray = ['Hello World!', 'Check out my GitHub! &rarr;', '&larr; Or find out more about me!', 'Get in touch I\'m always available!'];
 
     /*--------------Contact Details Collapseable--------------*/
@@ -33,6 +35,9 @@
 
     /*--------------Work History Collapseable--------------*/
     var aboutMeDetailsDiv = document.getElementById('aboutMeDetails');
+
+    /*--------------Cover Letter Collapseable--------------*/
+    var coverLetterDetailsDiv = document.getElementById('coverLetterDetails');
 
     app.displayContactDetails = function(){
       mainCollapse.innerHTML = contactDetailsDiv.innerHTML;
@@ -59,6 +64,11 @@
       currentDisplay = app.DisplayEnums.ABOUT_ME;
     }
 
+    app.displayCoverLetterDetails = function(){
+      mainCollapse.innerHTML = coverLetterDetailsDiv.innerHTML;
+      currentDisplay = app.DisplayEnums.COVER_LETTER;
+    }
+
     app.animateText = function(){
       animationTxt.innerHTML = animationArray[animationIndex];
       animationTxt.className = 'animated fadeInUp';
@@ -81,9 +91,27 @@
     document.getElementById("age").innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970);
   }
 
-
-
     //Button Listeners
+    document.getElementById('cover-letter-button').addEventListener('click', function(){
+      //If the collapse is open but displaying the details clicked, just close it.
+      if(mainCollapse.opened && currentDisplay == app.DisplayEnums.COVER_LETTER){
+        mainCollapse.toggle();
+      //Else if the collapse is opened but displaying other details than that that was
+      //clicked. Close it, pause for the animation using a setTimeout function, change
+      //the details and reopen it.
+    }else if(mainCollapse.opened && currentDisplay != app.DisplayEnums.COVER_LETTER){
+      mainCollapse.toggle();
+      setTimeout(function(){ 
+        app.displayContactDetails();
+        mainCollapse.toggle();
+      }, animationDelay); 
+      //If the collapse is not opened we can just 
+    }else if(!mainCollapse.opened){
+      app.displayCoverLetterDetails();
+      mainCollapse.toggle();
+    }    
+  });
+
     document.getElementById('contact-button').addEventListener('click', function(){
       //If the collapse is open but displaying the details clicked, just close it.
       if(mainCollapse.opened && currentDisplay == app.DisplayEnums.CONTACT){

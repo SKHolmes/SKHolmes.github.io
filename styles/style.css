@@ -26,6 +26,10 @@ h3{
 	color: #FFFFFF;
 }
 
+p{
+	color: #E6E6E6 !important;
+}
+
 .bottomBanner{	/* Set the appropriate corners of the toolbars in the collapse to be rounded. Hide 
 overflow so images appear rounded too.*/
 	border-bottom-right-radius: 5px;
@@ -129,8 +133,7 @@ overflow so images appear rounded too.*/
 	border-radius: 5px;
 	border-color: #8e8c83;
 	box-shadow: 10px 10px 5px #888888;
-	/*background-color: #3F51B5;*/
-	background-color: #3C3EE8;
+	background-color: #303F9F;
 }
 
 #animationText{
