@@ -1,0 +1,154 @@
+*{
+	font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+hr{ /* Set color of divider to stand out and give it a margin so it doesn't quite touch the end of the page. */
+	color: #8e8c83;
+	margin: 8px;
+}
+
+h1{	/* Cut the default font weight in half as it was to heavy to read and add margins to all the
+headers, set color to white. */
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+h2{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+h3{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+p{
+	color: #E6E6E6 !important;
+}
+
+.bottomBanner{	/* Set the appropriate corners of the toolbars in the collapse to be rounded. Hide 
+overflow so images appear rounded too.*/
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	overflow: hidden;
+	background-size: contain; 
+	background: url('../images/bottom_banner.png');
+}
+
+.topBanner{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+	background-size: contain; 
+	background: url('../images/top_banner.png');
+}
+
+.rate-header{	/* Keep inline, and lower width to leave space for image and animated text. */
+	color: #FFFFFF;	
+	width: 40%;
+	display: inline-block;
+}
+
+.rate-name{
+	color: #FFFFFF;
+	width: 40%;
+	display: inline-block;
+}
+
+.sub-header{
+	color: #FFFFFF;
+	width: 40%;
+	display: inline-block;
+}
+
+.invisible{	/* A class to simply keep the HTML, which i copy over to my collapse, to be invisible. */
+	display: none;
+	margin: 16px;
+}
+
+.rate-content{ /* Background image on paper-card, fade it to become a tad darker. */
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.6)
+		),
+	url('../images/dark_tile.jpg');
+	border-bottom-left-radius: 5px;
+	/*overflow: hidden; Can't hide overflow because it affects tooltips. Doesn't seem to affect 
+	image anyway.*/
+}
+
+.rate{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.rate-icon{
+	fill: #3F51B5;
+}
+
+.info{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+.profile{
+	background: url('../images/profile.jpg');
+	border-bottom-right-radius: 5px;
+	display: block;
+	max-width: 160px;
+/*	max-height: 648px;
+	min-height: 108px;*/
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+#swap {
+	vertical - align: top;
+	width: 0;
+	height: 3em;
+	/* needed. px, em or any other */;
+}
+
+#swap > span {
+	position: absolute;
+}
+
+#toolbar{
+	background: #303F9F;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#gitButton{
+	margin: 16px;
+	background-color: #B53F51;
+	box-shadow: 2px 2px 1px #888888;
+}
+
+#collapse{
+	margin-top: 4px;
+	font-weight: 200;
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #8e8c83;
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #303F9F;
+}
+
+#animationText{
+	float: right;
+	margin: 8px;
+	/*-webkit-animation-delay: 5s;*/
+}
+
+#age{
+	font-weight: 200;
+	color: #FFFFFF;
+}

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>S. Holmes CV</title>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script> 
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <link rel="import" href="bower_components/paper-card/paper-card.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/iron-icons/communication-icons.html">
+  <link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+  <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+  <template is="dom-bind" id="app">
+    <paper-toolbar id="toolbar">
+      <span class="title">Samual Kaleb Baldwin-Holmes</span>
+    </paper-toolbar>
+    <style is="custom-style"> /* Polymer's layout for paper-card, leave as named or it will cause issues. */
+    paper-card.rate { @apply(--layout-horizontal); }
+    .rate-image {
+      /*      width: 100px;*/
+      /*      height: 100%;*/
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      flex: 1;
+    }
+    .rate-content {
+      @apply(--layout-flex);
+      float: left;
+      flex: 4;
+    }
+    .rate-header { @apply(--paper-font-headline); }
+    .rate-name { color: var(--paper-grey-600); margin: 10px 0; }
+    paper-icon-button.rate-icon {
+      --iron-icon-fill-color: white;
+      --iron-icon-stroke-color: var(--paper-grey-600);
+    }
+  </style>
+  <paper-card style="width: 100%" class="rate">
+    <div class="rate-content">
+      <div class="card-content">
+        <div class="rate-header">Curriculum Vitae</div>
+        <br>
+        <div class="rate-name">Bachelor of Science Majoring in Computer Science</div>
+        <br>
+        <div class="sub-header">Victoria Univeristy, Wellington</div>
+      </div>
+      <div class="card-actions" id="button-set">
+        <paper-icon-button noink class="rate-icon" id="cover-letter-button" icon="communication:mail-outline"></paper-icon-button>
+        <paper-icon-button noink class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
+        <paper-icon-button noink class="rate-icon" id="work-history-button" icon="icons:work"></paper-icon-button>
+        <paper-icon-button noink class="rate-icon" id="reference-button" icon="icons:record-voice-over"></paper-icon-button>
+        <paper-icon-button noink class="rate-icon" src="./images/computer.png" id="education-button"></paper-icon-button>
+        <paper-icon-button noink class="rate-icon" id="about-me-button" icon="icons:rowing"></paper-icon-button>    
+        <a href="https://github.com/SKHolmes">
+          <paper-icon-button noink id="git-button" style="float: right;" src="./images/github_icon.gif">
+          </a>
+          <h3 id="animationText"></h3>
+        </paper-icon-button>
+        <paper-tooltip for="cover-letter-button" offset="0">Cover Letter</paper-tooltip>
+        <paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
+        <paper-tooltip for="work-history-button" offset="0">Work History</paper-tooltip>
+        <paper-tooltip for="reference-button" offset="0">References</paper-tooltip>
+        <paper-tooltip for="education-button" offset="0">Education and Skills</paper-tooltip>
+        <paper-tooltip for="about-me-button" offset="0">About Me</paper-tooltip>
+        <paper-tooltip for="git-button" offset="0">View my GitHub</paper-tooltip>
+      </div>
+    </div>
+    <div class="rate-image profile"></div>
+  </paper-card>
+  <div id="editable">
+    <iron-collapse id="collapse"></iron-collapse>
+  </div>
+</template>
+<!-- ***************CONTACT*************** -->
+<div id="contactDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>Contact Details</h1></paper-toolbar>
+  <p class="info"><b>Phone:</b> 027 364 6683</p>
+  <p class="info"><b>Email:</b> samualkholmes@gmail.com</p>
+  <p class="info"><b>Address:</b> 68A Ghuznee Street, Te Aro, Wellington</p>
+  <p class="info"><b>Github:</b> <a style="color: white;" href="https://github.com/SKHolmes">https://github.com/SKHolmes</a></p>
+  <paper-toolbar class="bottomBanner"></paper-toolbar>
+</div>
+<!-- ***************CONTACT*************** -->
+<!-- ***************WORK*HISTORY*************** -->
+<div id="workHistoryDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>Work History</h1></paper-toolbar>
+  <p class="info">2017 - Present<br><b>VizExplorer
+  </b><br>- Configuration Analyst</p>
+  <hr>
+  <p class="info">2017<br><b>Ministry for Pacific Peoples
+  </b><br>- Website Content Contractor</p>
+  <hr>
+  <p class="info">2016<br><b>Victoria University, School of Engineering and Computer Science
+  </b><br>- Tutor<br><i>- SWEN302 Trimester Two</i></p>
+  <hr>
+  <p class="info">2015<br><b>Victoria University, School of Chemical and Physical Sciences
+  </b><br>- Physics Lab Assisstant and Tutor<br><i>- PHYS122 Trimester One</i><br><i>- SARC122 Trimester Two</i></p>
+  <hr>
+  <p class="info">2013 - 2017<br><b>The Backbencher Gastropub</b><br>- Chef</p>
+  <hr>
+  <p class="info">2013<br><b>The Backbencher Gastropub</b><br>- Front of House</p>
+  <hr>
+  <p class="info">2012 - 2013<br><b>JonesAutomotive</b><br>- Automotive Engineer</p>
+  <hr>
+  <p class="info">2011 - 2012<br><b>Grace New Zealand Limited</b><br>- Concrete Admixtures Workshop Assisstant</p>
+  <paper-toolbar class="bottomBanner"></paper-toolbar>
+</div>
+<!-- ***************WORK*HISTORY*************** -->
+<!-- ***************REFERENCES*************** -->
+<div id="referencesDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>Reference Details</h1></paper-toolbar>
+  <!-- <div class="info" style="overflow: hidden;">
+    
+    <div class="info" style="width: 40%; float: left;">
+      <b>Karl Holmes</b><br><i>    - Owner Proprietor JonesAutomotive</i>
+    </div>
+    <div class="info" style="width: 40%; float: right;">
+      027 235 5110<br>jonesautomotive@xtra.co.nz
+    </div>
+  </div> -->
+  <paper-toolbar class="bottomBanner"><h2><u>References can be made available on request.</u></h2></paper-toolbar>
+</div>
+<!-- ***************REFERENCES*************** -->
+<!-- ***************EDUCATION*************** -->
+<div id="educationDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>Education & Skills</h1></paper-toolbar>
+  <p class="info">I am well versed and confident in languages such as Java, JavaScript, C. I have less experience with other languages such as C#, Python and Ruby but have had exposure to these languages in a working environment. I have had extensive experience with databasing as everyday I use SSMS and T-SQL at work as well as Google Firestore at home. I even have some functional experience with Haskell and Prolog. I have no problem using version control such as git as I have used it extensively for both my group projects at university and extra-curricular projects at home. This also exposed me to the use of the linux command-line at university and the windows command-line at home.  During the course of developing these projects I have started to become use to industry standard tools such as gulp, minify and SASS to name a few. I can create android applications and am working on one for for my mother’s business, I am self-taught, although I have finished an android course at university.
+    <br><br>
+    I have been introduced to both structured, waterfall style methodology and agile methodology. I have used agile methods extensively in my group projects using techniques such as, SCRUM poker, stand-ups, agile retrospectives, peer-programming and code-review. I have used front and back-end web development tools such as Express, Node.js and Jade.
+  </p>
+  <hr>
+  <p class="info">
+    My time in the IT industry and studying at Victoria University’s School of Engineering and Computer Science has exposed me to all aspects of software design and analysis, from planning and construction, to testing and maintainability. This extensive experience is something I could contribute to at any given situation or place of employment.
+    <br><br>
+
+    I firmly believe myself to be competent in the agile spectrum of the programming world, I consider the main and most important goal for any project is a minimum viable product. Consequently any application of time should be towards this end goal. Once reached the project must be remain flexible enough to take on any further aspects of the client's requests and continue to be such until the project is completed in it's entirety or our resources run out. This requires attentive but minimal planning, making sure we always have our priorities focused on an achievable, set task.
+
+  </p>
+  <paper-toolbar class="bottomBanner"></paper-toolbar>
+</div>
+<!-- ***************EDUCATION*************** -->
+<!-- ***************ABOUT*ME*************** -->
+<div id="aboutMeDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>About Me</h1></paper-toolbar>
+  <p class="info">Hello there! This section will cover the informal aspects of myself that may interest you including, spare-time activities, growing up and anything else I deem remotely interesting to read. Feel free to skip this section as it may come across as boring or somewhat unnecessary.
+    <hr>
+    <p class="info">I am currently <span id="age" class="age"></span> years old, I dont think I have mentioned that yet. I grew up in Lower Hutt, where I attended Our Lady of the Rosary primary and intermediate school. During my time there I was selected as one of three students to attend a Gifted Kids Program (GKP) once a week where they taught a higher-level curriculum such as meta-cognition, chess and Spanish! It was here that I first discovered my interest in Spanish, which will be a reoccurring theme in my past. In my final year at intermediate we were taught Spanish once a week as well! During this final year I was awarded the senior boy of the year award.<br><br>
+
+      I attended Saint Patrick's College Silverstream as my secondary school. Where I thrived in the hospitable teaching environment. In my first year I took the opportunity for the third time to learn Spanish from the start. The end of the year finishes with an awards ceremony where I received several awards but the most notable would be the 'Father John Silverwood Memorial Medal for Diligence'. Quite the mouthful. It could probably be shortened to 'Biggest Teacher's Pet Medal'. It was a medal for having the best behavioural scores for the entire year out of all my year group. Yes, apparently they grade behaviour now as well. The rest of my time at college revolved around study, rugby, and hanging out with friends. My grades were great all through my time at St. Pats, I always aimed for excellence and normally achieved it. Although towards the end of my time at college the amount of effort I put into trying to achieve excellence started to decline, as my teenage angst and testosterone levels rose. Despite the fact, I passed NCEA level 1 and 2 with merit, falling just short in level 3.<br><br>
+
+      Sports have always been a huge part of life and I've played rugby for the majority of it. I carried on playing through college and my teams were fairly successful, with my under 65kg team coached by my father taking the gold medal in the first division. In my final year of college I was offered the position to captain the third XV but declined and decided to play social rugby with my friends instead where we did more drinking than training, I probably shouldn't of said that. After college I played rugby for one more year for Marist St Pats but the team I played in disbanded due to lack of numbers which was disappointing to say the least. I am now in my second year playing for the Eastbourne under 85kg team and II love it there. I also have a borderline unhealthy addiction to rowing, hence the icon for this section! This will be my third season rowing for the Wellington Rowing Club, and I have a neat collection of medals to show off for it.<br><br>
+
+      My first year out of college I was kind of lost at where to go and what to do. I had recently started a new job at the Backbencher Gastropub where I was front of house just serving tables, polishing wine glasses, all the fun stuff that anyone who has worked in hospitality will tell you about. I should probably mention that I had moved out of my parents house to Petone where I started a diploma in computer science at the Weltec there, which was to be short lived. Now if you have heard of or been to the Backbencher you may know of the fire that put the restaurant out of commission for a year. I was only there for a month when it happened, luckily the company insurance paid everyone out under contract for a while to keep the rug under their feet.<br><br>
+
+      It was around about now I got completely sick of Weltec, not to insult the tertiary education provider but the classes offered in the first trimester were terrible for trying to keep students on. They consisted of Electronics, Social Skills, Discrete Logic and some form of maths which slips my mind. I was compiling complex logic gate formations in a simulator before I even knew what a variable was or how to use Java. I was forced into interactions with complete strangers instead of peer programming and joint learning. I left around halfway through the trimester and ended up working for my father at Jonesautomotive as a mechanic, where I learnt many practical skills that I wouldn't have today if I didn't. Next year I signed up at Victoria University.<br><br>
+
+      Victoria University was a welcome breath of fresh air, the classes were flexible, the teaching was clear and the people were fantastic to talk to. I took Spanish, yet again, and cruised my way through the lectures. They were so abundant in this amazing new information about Java and programming, I soaked it all in. Even the assignments were enjoyable! When people say that they're a fast learner they're probably just saying it because it sounds nice on their CV, but truely, I am a very fast learner. I had my friends sitting next to me asking how this works or why that doesn't, I tried my best to explain the concepts and ideas to them and most of the time they got across.<br><br>
+
+      I should mention that the Backbencher was re-opened at around this time and I jumped on an opportunity to get in the kitchen as an underwater ceramics technician (dishy). Over the course of the next two years I would work my way from washing dishes, to making salads and eventually running the hot-side and the entire kitchen where I learnt a lot more important life skills such as conflict management, time management, how to work under pressure and more practical skills that I still use to this day.<br><br>
+
+      I really love science and all the fields that broad word encompasses. Through I college I took up all the sciences on offer. I mention this because in my first year I passed PHYS122, a compulsory physics paper for computer science with an A- and was offered a tutoring position in my third year for it and another physics paper, SARC122. I took the offer up and really enjoyed teaching and talking to the students who were where I was a couple of years ago. I was well received from the students who liked my style of teaching, I have a knack of being able to tell when people are struggling with a particularly tricky idea. It didn't help that the main lab tutor spoke broken english. It wasn't for her lack of trying however she was a very lovely person to work with. It just meant that the students turned to me more often than not for aide.<br><br>
+
+      Then came the dark days. To say my second year was a flop would be an understatement. I failed multiple papers after thinking it would be as easy as my first year, big mistake, my lax attitude cost me a lot of points. During my second year I also fell ill with glandular fever, this sickness cost me weeks of lectures which compounded to my terrible year. But in hindsight I could also put it down to what was probably just a lack of focus and drive. I was still in cruise control from my first year and the unforgiving second year was a cold fish slap to the face.<br><br>
+
+      Woken up by how bad my second year was I realised that I needed a shift in attitude in order to get through my study and work. My third year was a lot better, I screwed my head back on and knuckled down through a successful year. My final year was much the same, I rediscovered my passion for what I was studying and the time just flew by. Not to say that it wasn't stressful because it was exceptionally stressful.<br><br>
+
+      If you have made it to the end of this wall of text then I applaud your pesistance and thank you for your time. As I have already discussed in my cover letter I am currently looking for full-time work in industry and am open to anything, from Java to C, SML to Haskell, JavaScript to any DML or even just fetching coffee. If you are interested in anything I have to offer don't hesitate to contact me. I am available at all times.<br><br>
+    </p>
+  </p>
+  <paper-toolbar class="bottomBanner"></paper-toolbar>
+</div>
+<!-- ***************ABOUT*ME*************** -->
+<!-- ***************COVER LETTER*************** -->
+<div id="coverLetterDetails" class="invisible">
+  <paper-toolbar class="topBanner"><h1>Cover Letter</h1></paper-toolbar>
+  <p class="info">
+    A Victoria University of Wellington graduate with a bachelor of science degree majoring in computer science. An enthusiastic potential employee with aptitude in many aspects of software engineering . Including but not limited to excellent communication skills, organised and readable coding standards and vast experience with version control mainly with the Git command line. A charismatic leader with experience managing small teams in high pressure environments while meeting tight time constraints.
+  </p>
+  <paper-toolbar class="bottomBanner"></paper-toolbar>
+</div>
+<!-- ***************COVER LETTER*************** -->
+<!-- build:js scripts/app.js -->
+<script src="./app.js"></script>
+<!-- endbuild-->
+</body>
+</html>
